@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.1s;
+  font-family: monospace;
+}
+a {
+  text-decoration: none;
+}
+// variables color
+$dark-color: #282c2f;
+$light-color: #f8f9fa;
+$blue-color: #5166d6;
+$red-color: #f44336;
+$green-color: #31a935;
+
+// border color
+$light-border: #edf1f4;
+$dark-border: #333;
+
+// variables shadow
+$dark-shadow-bigger: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+  rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+$light-shadow-bigger: 5px 5px 10px rgba(0,0,0,.25), -5px -5px 10px rgba(255,255,255,.1);
+$light-shadow: rgb(204, 219, 232) 3px 3px 6px 0px,
+  rgba(255, 255, 255, 0.5) -3px -3px 6px 1px;
+$light-shadow-inset: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+  rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+$shadow-2: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff;
+$shadow-2-inset: inset 5px 5px 10px rgba(0, 0, 0, 0.1),
+  inset -5px -5px 10px #fff;
+$dark-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25),
+  -5px -5px 10px rgba(255, 255, 255, 0.1);
+$dark-shadow-inset: 5px 5px 10px rgba(0, 0, 0, 0.25) inset,
+  -5px -5px 10px rgba(255, 255, 255, 0.1) inset;
+
+// Mixin để áp dụng dark mode
+@mixin dark-mode {
+  background-color: $dark-color;
+  color: $light-color;
+  border-color: $light-color;
+}
+
+// CSS mặc định
+.container {
+  background-color: $light-color;
+  color: $dark-color;
+  padding: 20px;
+}
+
+// Áp dụng Dark Mode bằng mixin
+.dark-mode {
+  @include dark-mode;
+}
