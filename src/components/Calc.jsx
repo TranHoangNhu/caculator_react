@@ -27,7 +27,7 @@ export default function Calc() {
         // Lấy độ dài của phần sau dấu chấm thập phân bằng cách trừ đi vị trí của dấu chấm từ độ dài tổng cộng của chuỗi
         const lengthAfterDecimal = numberAsString.length - decimalIndex - 1;
         if (parseInt(lengthAfterDecimal) > 2) {
-          result = result.toFixed(2);
+          result = parseFloat(result.toFixed(2));
         }
       }
       // Đặt giá trị mới là kết quả tính toán
